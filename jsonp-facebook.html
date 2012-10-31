@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+	<title>Facebook JSONP</title>
+	<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<script type="text/template" id="fb-page-template">
+	<div class="facebook-page">
+		<img align = "middle" src={{pic_cover.source}} alt="some_text" >
+		<h1 style="text-align:center;">{{ name }}</h1>
+		<p>Total Likes: <span>{{ fan_count }}</span></p>
+		<p>{{ description }}</p>
+		<a href={{page_url}}>Click here for Facebook Profile</a>
+	</div>
+</script>
+
+<script type="text/template" id="more-info-template">
+	<div class="more-info-page">
+		<p>Company Overview: <span>{{company_overview}}</span></p>
+		<a href={{website}}>Visit our Website</a>
+		<p>{{ mission }}</p>
+		<p>{{ products }}</p>
+		<img src={{pic_big}} alt="some_text" >
+	</div>
+</script>
+
+<div id="fb-page">
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+<script src="handlebars-1.0.rc.1.js"></script>
+<script src="jsonp-facebook.js"></script>
+
+</body>
+</html>
